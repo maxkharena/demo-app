@@ -4,13 +4,18 @@ import React from 'react';
 // Styled
 import { Wrapper, NavWrapper, Nav } from './styled';
 
+const LINKS = [
+  { to: '/login', title: 'Login' },
+  { to: '/home/user', title: 'Home' },
+  { to: '/about', title: 'About' },
+];
 
 const HOC = ({ children }) => (
   <Wrapper>
     <NavWrapper>
-        <Nav to="/login">Login</Nav>
-        <Nav to="/home/user">Home</Nav>
-        <Nav to="/about">About</Nav>
+        {LINKS.map(({ to, title }) => (
+          <Nav to={to}>{title}</Nav>
+        ))}
     </NavWrapper>
     {children}
   </Wrapper>
