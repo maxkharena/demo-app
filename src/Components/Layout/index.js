@@ -9,7 +9,7 @@ const HOC = ({ children }) => (
   <Wrapper>
     <NavWrapper>
         <Nav to="/login">Login</Nav>
-        <Nav to="/home/max">Home</Nav>
+        <Nav to="/home/user">Home</Nav>
         <Nav to="/about">About</Nav>
     </NavWrapper>
     {children}

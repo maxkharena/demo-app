@@ -29,7 +29,7 @@ const Login = () => {
                 placeholder="password" 
                 onChange={onChange('password')}
             />
-            <Submit to="/home/max">submit</Submit>
+            <Submit to="/home/user">submit</Submit>
         </Wrapper>
     );
 }

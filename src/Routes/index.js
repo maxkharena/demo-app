@@ -22,6 +22,7 @@ const Routes = () => (
         <Route exact path="/404">
             <Page404 />
         </Route>
+        <Redirect from="/" to="/home/max" />
         <Redirect from="*" to="/404" />
     </Switch>
 );
