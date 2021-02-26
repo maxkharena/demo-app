@@ -7,7 +7,6 @@ import { Wrapper, Input, Submit } from './styled';
 // Layout
 import Layout from '../Layout';
 
-
 const Login = () => {
     const [data, setData] = useState({ login: '', password: ''});
 
