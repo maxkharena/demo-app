@@ -6,7 +6,8 @@ import { useParams } from 'react-router-dom';
 import Layout from '../Layout';
 
 const Home = () => {
-    let { userName } = useParams();
+    const { userName } = useParams();
+    
     return (
         <div>
            <h1>Home page</h1>
