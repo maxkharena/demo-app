@@ -1,5 +1,6 @@
 // Absolute import
 import React, { useState } from 'react';
+import { useDispatch } from 'react-redux';
 
 // Styled
 import { Wrapper, Input, Submit } from './styled';
@@ -7,8 +8,12 @@ import { Wrapper, Input, Submit } from './styled';
 // Layout
 import Layout from '../Layout';
 
+// Actions
+import { addUser } from '../../actions';
+
 const Login = () => {
-    const [data, setData] = useState({ login: '', password: ''});
+    const [data, setData] = useState({ userName: '', password: ''});
+    const dispatch = useDispatch();
 
     const onChange = (field) => (event) => {
         setData({...data, [field]: event.target.value});
@@ -18,9 +23,9 @@ const Login = () => {
         <Wrapper>
             <Input 
                 type="text" 
-                value={data.login} 
-                placeholder="login" 
-                onChange={onChange('login')}
+                value={data.userName} 
+                placeholder="user name" 
+                onChange={onChange('userName')}
             />
             <Input 
                 type="password" 
@@ -28,7 +33,7 @@ const Login = () => {
                 placeholder="password" 
                 onChange={onChange('password')}
             />
-            <Submit to="/home/user">submit</Submit>
+            <Submit onClick={() => dispatch(addUser(data))}>submit</Submit>
         </Wrapper>
     );
 }

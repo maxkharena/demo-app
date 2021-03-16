@@ -7,7 +7,7 @@ import { Wrapper, NavWrapper, Nav } from './styled';
 const LINKS = [
   { to: '/login', title: 'Login' },
   { to: '/home/user', title: 'Home' },
-  { to: '/about', title: 'About' },
+  { to: '/articles', title: 'Articles' },
 ];
 
 const HOC = ({ children }) => (

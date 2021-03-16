@@ -5,7 +5,7 @@ import { Redirect, Route, Switch } from 'react-router-dom';
 // Components
 import Login from '../Components/Login';
 import Home from '../Components/Home';
-import About from '../Components/About';
+import Articles from '../Components/Articles';
 import Page404 from '../Components/404';
 
 const Routes = () => (
@@ -16,8 +16,8 @@ const Routes = () => (
         <Route exact path="/home/:userName">
             <Home />
         </Route>
-        <Route exact path="/about">
-            <About />
+        <Route exact path="/articles">
+            <Articles />
         </Route>
         <Route exact path="/404">
             <Page404 />

@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { Link } from 'react-router-dom';
 
 export const Wrapper = styled.div`
     display: flex;
@@ -15,7 +14,7 @@ export const Input = styled.input`
     border: none;
 `;
 
-export const Submit = styled(Link)`
+export const Submit = styled.button`
     width: 150px;
     height: 40px;
     border: none;
