@@ -19,9 +19,11 @@ const Home = () => {
         <div>
            <h1>Home page</h1>
            <p>Welcome {userName || 'Whoops...'}</p>
-           <Submit onClick={() => dispatch(deleteUser())}>
-                delete user
-           </Submit>
+           {userName && (
+                <Submit onClick={() => dispatch(deleteUser())}>
+                    delete user
+                </Submit>
+           )}
         </div>
     );
 }
